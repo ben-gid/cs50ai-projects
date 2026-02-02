@@ -5,6 +5,28 @@
 **Parser** is a natural language parser built using [NLTK](https://www.nltk.org/).  
 It reads a sentence, parses it according to a **context-free grammar (CFG)**, and identifies **noun phrase (NP) chunks** within the parsed structure.
 
+## Background
+**Natural language parsing** is a fundamental task in computational linguistics and artificial intelligence. For computers to understand human language, they must first break down sentences into their grammatical components — a process that comes naturally to humans but requires explicit rules for machines.
+
+This project tackles two key challenges in NLP:
+
+### 1. **Syntactic Parsing with Context-Free Grammars**
+A **context-free grammar (CFG)** defines the syntactic structure of a language using production rules. By specifying how sentences can be constructed from phrases, and phrases from words, we can build a **parse tree** that reveals the hierarchical structure of any grammatically valid sentence. This is essential for tasks like:
+- Machine translation
+- Question answering systems
+- Speech recognition
+- Information extraction
+
+### 2. **Noun Phrase Chunking**
+Nouns in sentences aren't always simply one word like "Dan" or "dog". Instead, they are usually **noun phrases** (NPs) like "my sister", "the day after tomorrow", or "the old house on the hill". NP chunking allows computers to identify these multi-word units as single entities, which is crucial for:
+- **Information retrieval**: Understanding what documents are *about*
+- **Named entity recognition**: Identifying people, places, and organizations
+- **Sentiment analysis**: Determining what specific entities are being discussed
+- **Text summarization**: Extracting key subjects and objects
+
+By combining CFG parsing with NP extraction, this parser demonstrates how rule-based systems can provide interpretable, structured representations of natural language — a foundation upon which modern NLP systems are built.
+
+## Example
 ```bash
 $ python parser.py sentences/8.txt
 ['holmes', 'sat', 'down', 'and', 'lit', 'his', 'pipe']

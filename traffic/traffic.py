@@ -6,6 +6,9 @@ import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
 
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 EPOCHS = 10
 IMG_WIDTH = 30
 IMG_HEIGHT = 30

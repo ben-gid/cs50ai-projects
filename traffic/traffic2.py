@@ -8,6 +8,9 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 EPOCHS = 30
 IMG_WIDTH = 30
 IMG_HEIGHT = 30
